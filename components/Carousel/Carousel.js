@@ -17,3 +17,51 @@
     <div class="right-button"> > </div>
   </div>
 */
+
+const carousel_container = document.querySelector('.carousel-container');
+const imageRef = 
+  ['./assets/carousel/mountains.jpeg', 
+  './assets/carousel/computer.jpeg', 
+  './assets/carousel/trees.jpeg', 
+  './assets/carousel/turntable.jpeg'];
+let index = 0;
+
+function createCarousel() {
+  const carousel = document.createElement('div');
+  carousel.classList.add('carousel');
+
+  const leftBtn = document.createElement('div');
+  leftBtn.textContent = '<';
+  carousel.appendChild(leftBtn);
+
+  const img1 = document.createElement('img');
+  img1.src = imageRef[0];
+  carousel.appendChild(img1);
+
+  const img2 = document.createElement('img');
+  img2.src = imageRef[1];
+  carousel.appendChild(img2);
+  
+  const img3 = document.createElement('img');
+  img3.src = imageRef[2];
+  carousel.appendChild(img3);
+  
+  const img4 = document.createElement('img');
+  img4.src = imageRef[3];
+  carousel.appendChild(img4);
+
+  const rightBtn = document.createElement('div');
+  rightBtn.textContent = '>';
+  carousel.appendChild(rightBtn);
+
+  console.log(carousel);
+  img1.style.display = "inline-block";
+
+  return carousel;
+}
+
+carousel_container.appendChild(createCarousel());
+
+/* 
+Ran out of time to complete this Stretch goal.
+*/
